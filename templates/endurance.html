@@ -1,0 +1,30 @@
+<html>
+{% include "header1.html" %}
+{% block content %}
+<table class="center" , style="width:500px">
+    <tr>
+        <th>Class Code</th>
+        <th>Class Name</th>
+        <th>Intructor</th>
+        <th>Class Time</th>
+        <th>Slots Available</th>
+        <th>Price</th>
+    </tr>
+    {% for class in classes %}
+    <tr>
+        <td>{{ class.class_code}}</td>
+        <td>{{ class.class_name}}</td>
+        <td>{{ class.instructor}}</td>
+        <td>{{ class.class_time}}</td>
+        <td>{{ class.slots_available}}</td>
+        <td>{{ class.price}}</td>
+        <td>
+            <a href="/enlistclass?code={{ class.class_code }}">Enlist in Class</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% include "footer.html" %}
+{% endblock %}
+
+</html>

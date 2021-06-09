@@ -1,0 +1,45 @@
+<html>
+{% extends "header1.html" %}
+{% block title %}Home Page{% endblock %}
+{% block content %}
+
+<h1 class="title is-1">Welcome, {{ name }}!</h1>
+
+
+<body>
+
+<div class="background">
+  
+  {% for message in get_flashed_messages() %}
+  <div class="success">
+    <h5 class="title is 3"> {{ message }} </h5>
+  </div>
+  {% endfor %}
+
+<h2 class="title is-2 has-text-centered">Classes Offered</h2>
+  <div class="columns">
+    <div class="column">
+      <tr>
+        <td><a href="/rowingclasses"><img src="https://image.freepik.com/free-photo/woman-exercising-rowing-machine-gym_23-2147827875.jpg" alt="Rowing class" style="width:500px;height:300px"><h3 class="title is-3">Rowing Classes</h3></a></td>
+      </tr>
+    </div>
+    <div class="column">
+      <tr>
+        <td><a href="/cyclingclasses"> <img src="https://image.freepik.com/free-photo/group-cycling-modern-fitness-bicycle-during-group-spinning-class-gym_56854-3591.jpg" alt="Cycling class" style="width:500px;height:300px"><h3 class="title is-3">Cycling Classes</h3></a></td>
+      </tr>
+    </div>
+    <div class="column">
+      <tr>
+        <td><a href="/strengthclasses"><img src="https://image.freepik.com/free-photo/athletes-floor-dumbbell-lift-with-one-hand_94347-858.jpg" alt="Strength class" style="width:500px;height:300px"><h3 class="title is-3">Strength Classes</h3></a></td>
+      </tr>
+    </div>
+    <div class="column">
+      <tr>
+        <td><a href="/enduranceclasses"><img src="https://image.freepik.com/free-photo/two-women-training-together-gym_1303-16205.jpg" alt="Endurance class" style="width:500px;height:300px"><h3 class="title is-3">Endurance Classes</h3></a></td>
+      </tr>
+    </div>
+  </div>
+</div>
+</body>
+{% endblock %}
+</html>

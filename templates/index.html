@@ -1,0 +1,13 @@
+<html>
+{% include "header2.html" %}
+<h1 class="title is-1">Welcome to GearUp!</h1>
+
+{% for message in get_flashed_messages() %}
+<div class="error">
+    <h5 class="title is-3"> {{ message }} </h5>
+</div>
+{% endfor %}
+
+{% include "footer.html" %}
+
+</html>

@@ -1,0 +1,32 @@
+<html>
+{% include "header1.html" %}
+{% block content %}
+{% for message in get_flashed_messages() %}
+<div class="error">
+    <h5> {{ message }} </h5>
+</div>
+{% endfor %}
+<table class="center" , style="width:500px">
+    
+    <tr>
+        <th>Class Code</th>
+        <th>Class Name</th>
+        <th>Intructor</th>
+        <th>Class Time</th>
+    </tr>
+    {% for class in enrolled_classes %}
+    <tr>
+        <td>{{ class.class_code }}</td>
+        <td>{{ class.class_name }}</td>
+        <td>{{ class.instructor }}</td>
+        <td>{{ class.class_time }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<h5>
+    <td>Total Payment Due: {{ payment_total }}
+</h5>
+{% include "footer.html" %}
+{% endblock %}
+
+</html>

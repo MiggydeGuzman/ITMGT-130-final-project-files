@@ -1,0 +1,18 @@
+<html>
+    
+        {% include "header.html" %}
+        {% block content %}
+        <table class="center", style="width:500px">
+            
+            <tr><td>Full Name</td><td>John Smith</td><td>Update Full Name</td><td><input type="text"></input></td></tr>
+            <tr><td>Email Address</td><td>johnsmith@test.com</td><td>Update Email Address</td><td><input type="text"></td></tr>
+            <tr><td>Mobile Number</td><td>0917-000-0000</td><td>Update Mobile Number</td><td><input type="text"></td></tr>
+            <tr><td>Birth Date</td><td>01/01/2000</td><td>Update Birth Date</td><td><input type="text"></td></tr>
+            <tr><td>Gender</td><td>Male</td><td>Update Gender</td><td><input type="text"></td></tr>
+            <tr><td>Mode of Payment</td><td>Credit Card</td><td>Update Mode of Payment</td><td><input type="text"></td></tr>
+            <button>Update Account Information</button>
+        </table>
+        {% include "footer.html" %}
+        {% endblock %}
+   
+</html>

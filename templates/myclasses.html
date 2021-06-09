@@ -1,0 +1,67 @@
+   <html>
+   {% extends "header.html" %}
+
+    {% block content %}
+    <head>
+    <style>
+    table, th, td {
+      border: 1px solid black;
+    }
+    table.center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    </style>
+    </head>
+    <body>
+     
+    <table class="center", style="width:500px">
+      <tr>My Currently Registered Classes</tr>
+      <tr>
+        <th>Class Code</th>
+        <th>Instructor</th>
+        <th>Section</th>
+        <th>Class Size</th>
+        <th>Class Details</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Mr. A</td>
+        <td>A</td>
+        <td>10</td>
+        <td><a href="/classdetails">Class Details</a></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Mr. B</td>
+        <td>B</td>
+        <td>10</td>
+        <td><a href="/classone">Class Details</a></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Mr. C</td>
+        <td>C</td>
+        <td>10</td>
+        <td><a href="/classone">Class Details</a></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Mr. D</td>
+        <td>D</td>
+        <td>10</td>
+        <td><a href="/classone">Class Details</a></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Mr. E</td>
+        <td>E</td>
+        <td>10</td>
+        <td><a href="/classone">Class Details</a></td>
+      </tr>
+    </table>
+
+{% include "footer.html" %}
+{% endblock %}
+</body>
+</html>

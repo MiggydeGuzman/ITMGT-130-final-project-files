@@ -1,0 +1,28 @@
+<html>
+{% include "header1.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+<h1>Add New Classes</h1>
+<form method="POST" action="/adminclasses">
+    {% for message in get_flashed_messages() %}
+    <div class="success">
+        <h5> {{ message }} </h5>
+    </div>
+    {% endfor %}
+    {{ form.hidden_tag() }}
+    <div>
+        {{ wtf.form_field(form.class_code) }}
+        {{ wtf.form_field(form.class_category) }}
+        {{ wtf.form_field(form.class_name) }}
+        {{ wtf.form_field(form.instructor) }}
+        {{ wtf.form_field(form.class_time) }}
+        {{ wtf.form_field(form.price) }}
+        {{ wtf.form_field(form.slots_available) }}
+    </div>
+    <div>
+        <button type="submit">Add New Class</button>
+    </div>
+</form>
+{% include "footer.html" %}
+
+</html>

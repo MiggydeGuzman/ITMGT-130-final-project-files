@@ -1,0 +1,29 @@
+<html>
+{% include "header1.html" %}
+{% block content %}
+<table class="center" , style="width:1000px">
+
+    <tr>
+        <td class="title is-3">First Name</td>
+        <td class="title is-3">{{ user_details.first_name }}</td>
+    </tr>
+    <tr>
+        <td class="title is-3">Last Name</td>
+        <td class="title is-3">{{ user_details.last_name }}</td>
+    </tr>
+    <tr>
+        <td class="title is-3">Email Address</td>
+        <td class="title is-3">{{ user_details.email }}</td>
+    </tr>
+    <tr>
+        <td class="title is-3">Mode of Payment</td>
+        <td class="title is-3">{{ user_details.payment_method }}</td>
+    </tr>
+    <tr>
+        <td class="title is-5"><a href="/changepassword">Change Password</a></td>
+    </tr>
+</table>
+{% include "footer.html" %}
+{% endblock %}
+
+</html>
