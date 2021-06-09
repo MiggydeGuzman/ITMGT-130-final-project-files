@@ -1,8 +1,8 @@
 <html>
 {% include "header1.html" %}
 {% block content %}
-<table class="center" , style="width:1000px">
-
+<div class="tablebg">
+<table class="table table-light table-striped", style="width:1000px">
     <tr>
         <td class="title is-3">First Name</td>
         <td class="title is-3">{{ user_details.first_name }}</td>
@@ -23,6 +23,7 @@
         <td class="title is-5"><a href="/changepassword">Change Password</a></td>
     </tr>
 </table>
+</div>
 {% include "footer.html" %}
 {% endblock %}
 

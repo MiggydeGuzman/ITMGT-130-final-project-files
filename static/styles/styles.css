@@ -1,8 +1,70 @@
-.back {
-	background-color: blue;
+*{
+	margin: 0;
+	padding: 0;
+  }
+  
+.back{
+	background-color: white;
+	color: black;
+	position: relative;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	background-size: 100%;
+  }
+  
+.tablebg{
+	background-color: white;
+	color: black;
+	position: relative;
+	height: 60vh;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	background-size: 100%;
+  }
+
+
+h1, h2, h3, h4, th {
+	  font-size: 40px;
+	  font-weight: 200;
+  }  
+
+
+.footer {
+	position: fixed;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
 }
 
-h1 {
-	font-size: 40px;
+.test{
+	padding: 10px;
+	text-align: center;
+	background: rgb(242,208,59);
+	color: blue;
+	font-size: 20px;
+	border-style: groove;
+}
 
+
+.box {
+	background: white;
+	width: 300px;
+	border-radius: 6px;
+	margin: 0 auto 0 auto;
+	padding: 0px 0px 70px 0px;
+	border: black 4px solid;
+}
+
+.total {
+	text-align: center;
+	font-size: 35px;
+}
+
+.head{
+	color: white;
 }

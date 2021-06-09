@@ -2,17 +2,23 @@
 {% include "header1.html" %}
 {% block content %}
 {% for message in get_flashed_messages() %}
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
 <div class="error">
     <h5> {{ message }} </h5>
 </div>
 {% endfor %}
-<table class="center" , style="width:500px">
-    
+<div class="tablebg">
+<table class="table table-light table-striped", style="width:1000px">
     <tr>
-        <th>Class Code</th>
-        <th>Class Name</th>
-        <th>Intructor</th>
-        <th>Class Time</th>
+        <th scope="col">Class Code</th>
+        <th scope="col">Class Name</th>
+        <th scope="col">Intructor</th>
+        <th scope="col">Class Time</th>
     </tr>
     {% for class in enrolled_classes %}
     <tr>
@@ -23,9 +29,10 @@
     </tr>
     {% endfor %}
 </table>
-<h5>
-    <td>Total Payment Due: {{ payment_total }}
-</h5>
+</div>
+<div class="total">
+     Total Payment Due: {{ payment_total }}
+</div>
 {% include "footer.html" %}
 {% endblock %}
 

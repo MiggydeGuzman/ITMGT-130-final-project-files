@@ -2,23 +2,33 @@
 {% include "header2.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 
-<div class="back">
-<h1>Login</h1>
-<form method="POST" action="/login">
-  {% for message in get_flashed_messages() %}
-  <div class="error">
-    <h5> {{ message }} </h5>
-  </div>
-  {% endfor %}
-  {{ form.hidden_tag() }}
-  <div>
+<br>
+<h1 class="title is 1 has-text-centered">Login</h1>
+<div class="container">
+  <div class="row align-items-center">
+    <form method="POST" action="/login">
+    {% for message in get_flashed_messages() %}
+      <div class="error">
+        <h5> {{ message }} </h5>
+      </div>
+    {% endfor %}
+    {{ form.hidden_tag() }}
+
+    <div>
     {{ wtf.form_field(form.username) }}
     {{ wtf.form_field(form.password) }}
-  </div>
-  <div>
-    <button type="submit">Login</button>
-  </div>
-</form>
-{% include "footer.html" %}
+    </div>
+    <div>
+      <br>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+  </form>
 </div>
+</body>
+{% include "footer.html" %}
 </html>
+    
+
+
+
+ 

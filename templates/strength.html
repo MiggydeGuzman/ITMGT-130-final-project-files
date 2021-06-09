@@ -1,14 +1,15 @@
 <html>
 {% include "header1.html" %}
 {% block content %}
-<table class="center" , style="width:500px">
+<div class="tablebg">
+<table class="table table-light table-striped", style="width:500px">
     <tr>
-        <th>Class Code</th>
-        <th>Class Name</th>
-        <th>Intructor</th>
-        <th>Class Time</th>
-        <th>Slots Available</th>
-        <th>Price</th>
+        <th scope="col">Class Code</th>
+        <th scope="col">Class Name</th>
+        <th scope="col">Intructor</th>
+        <th scope="col">Class Time</th>
+        <th scope="col">Slots Available</th>
+        <th scope="col">Price</th>
     </tr>
     {% for class in classes %}
     <tr>
@@ -24,6 +25,7 @@
     </tr>
     {% endfor %}
 </table>
+</div>
 {% include "footer.html" %}
 {% endblock %}
 

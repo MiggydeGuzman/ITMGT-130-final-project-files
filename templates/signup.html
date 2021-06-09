@@ -3,7 +3,8 @@
 {% include "header2.html" %}
 {% import "bootstrap/wtf.html" as wtf %}
 
-<div>
+<div class="container">
+  <div class="row align-items-center">
   <form method="POST" action="/signup">
     {% for message in get_flashed_messages() %}
     <div class="success">
@@ -18,14 +19,19 @@
       {{ wtf.form_field(form.password) }}
     </div>
     <div>
-      <h4>Gender</h4>
+      <br>
+      <h6>Gender</h6>
       {{ wtf.form_field(form.gender) }}
     </div>
+    
     <div>
-      <h4>Payment Method</h4>
+      <br>
+      <h6>Payment Method</h6>
       {{ wtf.form_field(form.payment_method) }}
     </div>
-    <button type="submit">Sign Up</button>
+  </div>
+  <br>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
   </form>
 </div>
 {% include "footer.html" %}
